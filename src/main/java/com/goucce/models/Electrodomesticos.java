@@ -150,11 +150,11 @@ public class Electrodomesticos {
         }
 
 
-        //Adjuntar Lavadora
+        //Añadir al precio el precio final si son Lavadoras
         if (electrodomesticos instanceof Lavadoras)
             electrodomesticos.precioBase = Lavadoras.precioFinalLavadora((Lavadoras) electrodomesticos);
 
-        //Adjuntar Television
+        //Añadir al precio el precio final si son Televisiones
         if (electrodomesticos instanceof Televisiones)
             electrodomesticos.precioBase = Televisiones.precioFinalTelevision((Televisiones) electrodomesticos);
 

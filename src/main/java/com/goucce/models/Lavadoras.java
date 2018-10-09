@@ -33,7 +33,7 @@ public class Lavadoras extends Electrodomesticos {
     }
 
 
-    public int getload() {
+    public int getCarga() {
         return carga;
     }
 

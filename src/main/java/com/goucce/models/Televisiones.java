@@ -1,20 +1,25 @@
 package com.goucce.models;
 
 public class Televisiones extends Electrodomesticos {
+    //Atributos
     int resolucion = 20;
     boolean TDT = false;
 
+    //Constructores
+    //1: Por defecto, unicamente heredamos lo del padre, gracias a super
     public Televisiones() {
         super();
     }
 
-    public Televisiones(double precioBase, int peso) {
+    //2: Precio y Peso, resto con super los de herencia
+    public Televisiones(double precioBase, double peso) {
         super();
         this.precioBase = precioBase;
         this.peso = peso;
     }
 
-    public Televisiones(double precioBase, String coloR, char consumo, int peso, int resolucion, boolean TDT) {
+    //3: Resolucion + TDT, resto con super los de herencia
+    public Televisiones(double precioBase, String coloR, char consumo, double peso, int resolucion, boolean TDT) {
         super();
         this.precioBase = precioBase;
         this.coloR = checkColor(coloR);
@@ -24,6 +29,8 @@ public class Televisiones extends Electrodomesticos {
         this.TDT = TDT;
     }
 
+    //Metodos
+
     public int getResolucion()    {
         return resolucion;
     }
@@ -31,6 +38,7 @@ public class Televisiones extends Electrodomesticos {
     public boolean isTDT() {
         return TDT;
     }
+
 
     public static double precioFinalTelevision (Televisiones Electrodomesticos)
     {
